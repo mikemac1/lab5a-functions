@@ -9,10 +9,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-let sumTotal = a + b;
-let funcArray = [sumTotal, `The sum of ${a} and ${b} is ${sumTotal}.`];
-console.log(funcArray);
-return funcArray;
+    let sumTotal = a + b;
+    let funcArray = [sumTotal, `The sum of ${a} and ${b} is ${sumTotal}.`];
+    console.log(funcArray);
+    return funcArray;
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -30,14 +30,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
-let multiTotal = a * b;
-let questTwo = [multiTotal, `The product of ${a} and ${b} is ${multiTotal}.`];
-console.log(questTwo);
-return questTwo;
+    let multiTotal = a * b;
+    let questTwo = [multiTotal, `The product of ${a} and ${b} is ${multiTotal}.`];
+    console.log(questTwo);
+    return questTwo;
 }
 
 // Here is the test for multiply(); uncomment it to run it
-testMultiply(5,9);
+testMultiply(5, 9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -54,26 +54,26 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-let sumA = sum(a, b);
-let sumB = sum(c, 0);
-let sumTot = sum(sumA[0], sumB[0]);
-console.log(`${sumA[0]} is the addition of ${a} & ${b}`);
-console.log(`${sumB[0]} is the addition of ${c} & 0`);
-console.log(`${a} and ${b} and ${c} sum to ${sumTot[0]}.`);
+    let sumA = sum(a, b);
+    let sumB = sum(c, 0);
+    let sumTot = sum(sumA[0], sumB[0]);
+    console.log(`${sumA[0]} is the addition of ${a} & ${b}`);
+    console.log(`${sumB[0]} is the addition of ${c} & 0`);
+    console.log(`${a} and ${b} and ${c} sum to ${sumTot[0]}.`);
 
-let multiA = multiply(a, b);
-let multiB = multiply(c, 1);
-let multiTot = multiply(multiA[0], multiB[0]);
-console.log(`${multiA[0]} is the product of ${a} & ${b}`);
-console.log(`${multiB[0]} is the product of ${c} & ${1}`);
-console.log(`The product of ${a} and ${b} and ${c} is ${multiTot[0]}.`);
+    let multiA = multiply(a, b);
+    let multiB = multiply(c, 1);
+    let multiTot = multiply(multiA[0], multiB[0]);
+    console.log(`${multiA[0]} is the product of ${a} & ${b}`);
+    console.log(`${multiB[0]} is the product of ${c} & ${1}`);
+    console.log(`The product of ${a} and ${b} and ${c} is ${multiTot[0]}.`);
 
-let threeArray = [sumTot[0], multiTot[0], `${a} and ${b} and ${c} sum to ${sumTot[0]}.`, `The product of ${a} and ${b} and ${c} is ${multiTot[0]}.`]
-return threeArray;
+    let threeArray = [sumTot[0], multiTot[0], `${a} and ${b} and ${c} sum to ${sumTot[0]}.`, `The product of ${a} and ${b} and ${c} is ${multiTot[0]}.`]
+    return threeArray;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-testSumAndMultiply(4,7,5);
+testSumAndMultiply(4, 7, 5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -91,16 +91,16 @@ Test this function by hand in the console to get it working, and when you think 
 let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
-let firstElementA = sum(sumArr[0],sumArr[1]);
-firstElementA = firstElementA[0];
-let firstElementB = sum(sumArr[2], 0);
-firstElementB = firstElementB[0];
-let firstElementTot = sum(firstElementA, firstElementB);
-firstElementTot = firstElementTot[0];
-console.log(firstElementTot);
+    let firstElementA = sum(sumArr[0], sumArr[1]);
+    firstElementA = firstElementA[0];
+    let firstElementB = sum(sumArr[2], 0);
+    firstElementB = firstElementB[0];
+    let firstElementTot = sum(firstElementA, firstElementB);
+    firstElementTot = firstElementTot[0];
+    console.log(firstElementTot);
 
-let fourArray = [firstElementTot, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${firstElementTot} is their sum.`]
-return fourArray;
+    let fourArray = [firstElementTot, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${firstElementTot} is their sum.`]
+    return fourArray;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -129,7 +129,7 @@ function multiplyArray(multArr) { //eslint-disable-line
     let elementTot = multiply(elementA, elementB);
     elementTot = elementTot[0];
     console.log(elementTot);
-    
+
     let fiveArray = [elementTot, `The numbers ${multArr[0]},${multArr[1]},${multArr[2]} have a product of ${elementTot}.`]
     return fiveArray;
 }
@@ -156,13 +156,25 @@ This function should be dynamic, accepting an array of any length.
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyAnyArray() function and see if the test passes.*/
 
 // Write your code here
-let testDynamicArray = [1,2,3,4,5]; //eslint-disable-line
+let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    let anyArray = [];
+    let stretchTot = 1;
+    let i = 0;
+    while (i < dynamicArray.length) {
+        stretchTot = multiply(dynamicArray[i], stretchTot);
+        stretchTot = stretchTot[0];
+        console.log(stretchTot);
+        i++;
+    }
+    
+    console.log(stretchTot);
+    anyArray = [stretchTot, `The numbers 1,2,3,4,5 have a product of ${stretchTot}.`]
+    return anyArray;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
